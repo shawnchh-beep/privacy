@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 產業每日網站檢查表</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#dbe3ee;
+      --accent:#2563eb;
+      --accent-soft:#e8f0ff;
+      --ok:#0f766e;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:32px 20px 64px;
+    }
+    h1,h2,h3{line-height:1.3;margin:0 0 12px}
+    h1{font-size:32px}
+    h2{
+      font-size:22px;
+      margin-top:28px;
+      padding-bottom:8px;
+      border-bottom:2px solid var(--line);
+    }
+    h3{font-size:18px;margin-top:10px}
+    p{margin:8px 0 0}
+    .intro{
+      background:linear-gradient(135deg, #eef4ff, #ffffff);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:20px;
+      margin-bottom:24px;
+    }
+    .grid{
+      display:grid;
+      gap:16px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 4px 14px rgba(15,23,42,.04);
+    }
+    .site-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .site-title a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .site-title a:hover{text-decoration:underline}
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      color:var(--ok);
+      background:#ecfdf5;
+      border:1px solid #bbf7d0;
+      border-radius:999px;
+      padding:3px 10px;
+    }
+    ul{margin:8px 0 0 18px}
+    li{margin:4px 0}
+    .checklist{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:16px;
+      margin-top:16px;
+    }
+    .check-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+    }
+    .check-card h3{margin-bottom:10px}
+    .check-card label{
+      display:block;
+      margin:10px 0;
+      cursor:pointer;
+    }
+    input[type="checkbox"]{
+      transform:translateY(1px);
+      margin-right:8px;
+    }
+    .schedule{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:16px;
+      margin-top:16px;
+    }
+    .timebox{
+      background:var(--accent-soft);
+      border:1px solid #c8d8ff;
+      border-radius:16px;
+      padding:16px;
+    }
+    .footer{
+      margin-top:28px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .small{
+      color:var(--muted);
+      font-size:14px;
+    }
+    .note{
+      background:#fff7ed;
+      border:1px solid #fed7aa;
+      border-radius:14px;
+      padding:14px 16px;
+      margin-top:16px;
+    }
+    @media print{
+      body{background:#fff}
+      .card,.check-card,.intro,.timebox,.note{box-shadow:none}
+      a{color:#000;text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="intro">
+      <h1>AI 產業每日網站檢查表</h1>
+      <p>用途：每天用 1 小時，固定追蹤 AI 需求端、供應鏈、記憶體與市場定價。</p>
+      <p>原則：<strong>固定名單、固定順序、固定問題</strong>。不要每天亂看一堆新聞。</p>
+      <p class="small">建議順序：需求端 → 供應鏈 → 市場驗證 → 寫下今日結論。</p>
+    </section>
+
+    <h2>A. 每天一定看：核心官方來源</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="site-title">
+          <h3>1) Microsoft Investor Relations</h3>
+          <a href="https://www.microsoft.com/en-us/investor/earnings/fy-2026-q2/press-release-webcast" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">需求端 / 雲端 / AI 投資</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>最新 earnings press release、webcast、business outlook、下一次財報日期</li>
+          <li><strong>重點：</strong>Azure / Cloud 成長有沒有維持、管理層有沒有繼續強調 AI 基礎設施投資、指引有沒有轉弱</li>
+          <li><strong>你要問：</strong>AI 帶來的是收入成長，還是只有成本增加？</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="site-title">
+          <h3>2) Alphabet Investor Relations</h3>
+          <a href="https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">需求端 / CapEx / Cloud</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>earnings call 頁面、財報 PDF、CapEx / AI investments 段落</li>
+          <li><strong>重點：</strong>Google Cloud 成長、AI 投資有沒有擴大、管理層對全年 CapEx 的說法</li>
+          <li><strong>你要問：</strong>AI 是否已經轉成實際業務成果？</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="site-title">
+          <h3>3) NVIDIA Investor Relations</h3>
+          <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">GPU / Data Center / 毛利</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>financial reports、events &amp; presentations、最新財報新聞稿</li>
+          <li><strong>重點：</strong>Data Center 營收增速、毛利率是否維持高檔、下季營收指引</li>
+          <li><strong>你要問：</strong>AI 訓練轉推理時，需求有沒有變化？</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="site-title">
+          <h3>4) TSMC Investor Relations</h3>
+          <a href="https://investor.tsmc.com/chinese/encrypt/files/encrypt_file/reports/2026-04/3cef85204275f94fd111485cfdf4adb3c0263c45/TSMC%201Q26%20Transcript.pdf" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">先進製程 / 先進封裝 / CapEx</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>quarterly results、earnings transcript、presentation material</li>
+          <li><strong>重點：</strong>AI 需求有沒有持續強、N3 / N2 需求、CoWoS / advanced packaging、CapEx 是否上修</li>
+          <li><strong>你要問：</strong>先進製程和先進封裝是否仍然吃緊？</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="site-title">
+          <h3>5) ASML Financial Results</h3>
+          <a href="https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">設備 / EUV / 需求前置指標</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>季度財報頁、press release、管理層對需求與出貨的評論</li>
+          <li><strong>重點：</strong>EUV / DUV 需求、客戶擴產意願、全年營收指引、地緣政治影響</li>
+          <li><strong>你要問：</strong>設備端看到的是景氣延續，還是開始放緩？</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="site-title">
+          <h3>6) Micron Investor Relations</h3>
+          <a href="https://investors.micron.com/" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">記憶體 / HBM / DRAM / NAND</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>IR 首頁、最新季度 results、簡報、新聞稿</li>
+          <li><strong>重點：</strong>HBM / DRAM / NAND 需求、AI 對記憶體拉動、供給是否仍緊、CapEx 與現金流</li>
+          <li><strong>你要問：</strong>記憶體這波是週期反彈，還是 AI 結構性拉動？</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="site-title">
+          <h3>7) SK hynix IR</h3>
+          <a href="https://www.skhynix.com/ir/UI-FR-IR06/" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">HBM / 高階 DRAM</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>earnings release、conference call、財報時程</li>
+          <li><strong>重點：</strong>HBM 價格與出貨、HBM3E / HBM4 進度、客戶訂單能見度</li>
+          <li><strong>你要問：</strong>高階記憶體的供需與技術節奏有沒有變？</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <h2>B. 每天看：產業價格與供需驗證</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="site-title">
+          <h3>8) TrendForce</h3>
+          <a href="https://www.trendforce.com/presscenter/" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">價格 / 供需 / 記憶體驗證</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>Press Center、memory price、HBM、DRAM、NAND 相關新聞</li>
+          <li><strong>重點：</strong>DRAM / NAND 合約價趨勢、供應是否持續吃緊、產能是否往 AI / enterprise 產品傾斜</li>
+          <li><strong>你要問：</strong>價格上漲是短期反彈，還是供需結構改變？</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>C. 每天看：市場定價與情緒</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="site-title">
+          <h3>9) Reuters Technology</h3>
+          <a href="https://www.reuters.com/technology/" target="_blank" rel="noopener noreferrer">開啟網站</a>
+        </div>
+        <span class="tag">新聞驗證 / 風險事件</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>AI、semiconductor、cloud capex 相關新聞；核心公司重大消息</li>
+          <li><strong>重點：</strong>今天有沒有重大新事件、風險是雜訊還是改變基本面</li>
+          <li><strong>你要問：</strong>市場在擔心什麼？這件事會不會改變我的投資假設？</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="site-title">
+          <h3>10) 券商 / 報價平台 / ETF 頁面</h3>
+          <a href="#" onclick="return false;">自選平台</a>
+        </div>
+        <span class="tag">價格 / 估值 / 情緒</span>
+        <ul>
+          <li><strong>每天看什麼：</strong>AI 主鏈個股、半導體 ETF、AI ETF 的當日表現</li>
+          <li><strong>重點：</strong>今天誰最強、誰最弱、漲跌是否與基本面一致</li>
+          <li><strong>你要問：</strong>市場有沒有過度提前反映？股價是不是脫離基本面？</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>每日 1 小時檢查順序</h2>
+    <div class="schedule">
+      <div class="timebox">
+        <h3>前 20 分鐘：需求端</h3>
+        <ul>
+          <li>Microsoft IR</li>
+          <li>Alphabet IR</li>
+          <li>NVIDIA IR</li>
+        </ul>
+        <p><strong>今天要回答：</strong>雲端大廠 AI 支出有沒有變弱？NVIDIA Data Center 動能有沒有變化？</p>
+      </div>
+      <div class="timebox">
+        <h3>中間 20 分鐘：供應鏈</h3>
+        <ul>
+          <li>TSMC IR</li>
+          <li>ASML</li>
+          <li>Micron IR</li>
+          <li>SK hynix IR</li>
+          <li>TrendForce</li>
+        </ul>
+        <p><strong>今天要回答：</strong>先進製程、設備、HBM / DRAM / NAND 是否仍然強？</p>
+      </div>
+      <div class="timebox">
+        <h3>最後 20 分鐘：市場驗證</h3>
+        <ul>
+          <li>Reuters</li>
+          <li>報價 / ETF 頁面</li>
+          <li>自己的研究筆記</li>
+        </ul>
+        <p><strong>今天要回答：</strong>今天市場在交易什麼？有沒有改變我的原始假設？</p>
+      </div>
+    </div>
+
+    <h2>可勾選每日檢查表</h2>
+    <div class="checklist">
+      <div class="check-card">
+        <h3>需求端</h3>
+        <label><input type="checkbox">Microsoft：Cloud / AI 說法有沒有變</label>
+        <label><input type="checkbox">Alphabet：CapEx / AI investment 有沒有變</label>
+        <label><input type="checkbox">NVIDIA：Data Center / 毛利 / 指引有沒有變</label>
+      </div>
+
+      <div class="check-card">
+        <h3>供應端</h3>
+        <label><input type="checkbox">TSMC：AI demand / N3 / CapEx 有沒有變</label>
+        <label><input type="checkbox">ASML：設備需求 / 全年展望有沒有變</label>
+        <label><input type="checkbox">Micron：AI memory / tight supply 有沒有變</label>
+        <label><input type="checkbox">SK hynix：HBM 供需 / 新說法有沒有變</label>
+        <label><input type="checkbox">TrendForce：DRAM / NAND / HBM 價格方向有沒有變</label>
+      </div>
+
+      <div class="check-card">
+        <h3>市場端</h3>
+        <label><input type="checkbox">Reuters：今天有沒有重大 AI / 半導體新聞</label>
+        <label><input type="checkbox">ETF / 個股：價格是不是過度反應</label>
+      </div>
+
+      <div class="check-card">
+        <h3>最後輸出</h3>
+        <label><input type="checkbox">今天 AI 產業最重要的新事實是什麼</label>
+        <label><input type="checkbox">它影響的是需求、供給，還是估值</label>
+        <label><input type="checkbox">我原本的看法要不要修正</label>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>使用提醒：</strong>
+      <ul>
+        <li>不要每天擴充網站名單，先把這份跑熟。</li>
+        <li>不要先看股價再倒推故事，先看需求與供應鏈。</li>
+        <li>每天最後一定要留下 1 句結論，不然你只是看資料，不算研究。</li>
+      </ul>
+    </div>
+
+    <p class="footer">可直接放到 GitHub Pages。檔名建議：index.html</p>
+  </div>
+</body>
+</html>
